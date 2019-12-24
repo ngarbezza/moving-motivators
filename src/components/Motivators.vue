@@ -10,7 +10,9 @@
       <div class="motivators-list">
         <draggable v-model="motivators">
           <div v-for="motivator in motivators" :key="motivator.id">
-            <div class="motivator-stacked" @mouseover="viewingMotivator(motivator)">
+            <div class="motivator-stacked"
+                 :style="`background-color: ${motivator.color}`"
+                 @mouseover="viewingMotivator(motivator)">
               <div class="motivator-name">{{ motivator.name }}</div>
             </div>
           </div>
@@ -61,34 +63,34 @@ const shuffle = (array) => {
 
 const motivators = shuffle([
   {
-    id: '00', name: 'Relaciones', image: relaciones, description: 'bcd',
+    id: '00', name: 'RELACIONES', image: relaciones, description: 'bcd', color: '#1eb26a',
   },
   {
-    id: '01', name: 'Aceptación', image: aceptacion, description: 'abc',
+    id: '01', name: 'ACEPTACIÓN', image: aceptacion, description: 'abc', color: '#ece810',
   },
   {
-    id: '02', name: 'Curiosidad', image: curiosidad, description: 'def',
+    id: '02', name: 'CURIOSIDAD', image: curiosidad, description: 'def', color: '#faaf18',
   },
   {
-    id: '03', name: 'Libertad', image: libertad, description: 'ghi',
+    id: '03', name: 'LIBERTAD', image: libertad, description: 'ghi', color: '#ee3e35',
   },
   {
-    id: '04', name: 'Estatus', image: estatus, description: 'jkl',
+    id: '04', name: 'ESTATUS', image: estatus, description: 'jkl', color: '#f27ca9',
   },
   {
-    id: '05', name: 'Meta', image: meta, description: 'mno',
+    id: '05', name: 'META', image: meta, description: 'mno', color: '#483082',
   },
   {
-    id: '06', name: 'Honra', image: honra, description: 'pqr',
+    id: '06', name: 'HONRA', image: honra, description: 'pqr', color: '#02bce8',
   },
   {
-    id: '07', name: 'Maestría', image: maestria, description: 'stu',
+    id: '07', name: 'MAESTRÍA', image: maestria, description: 'stu', color: '#5dc3ad',
   },
   {
-    id: '08', name: 'Orden', image: orden, description: 'vwx',
+    id: '08', name: 'ORDEN', image: orden, description: 'vwx', color: '#f8c0cf',
   },
   {
-    id: '09', name: 'Poder', image: poder, description: 'yza',
+    id: '09', name: 'PODER', image: poder, description: 'yza', color: '#a7af38',
   },
 ]);
 
@@ -131,10 +133,13 @@ h1 {
   border: 2px solid #2c3e50;
 }
 
+.motivator-name {
+  color: white;
+  font-weight: bolder;
+}
+
 .motivator-stacked:hover {
-  padding: 10px;
-  margin: 5px;
-  border: 2px solid red;
+  padding-left: 20px;
 }
 
 .motivator-detail {
