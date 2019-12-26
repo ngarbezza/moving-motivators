@@ -137,10 +137,20 @@ export default {
 
 <style scoped>
 
-.motivators {
-  padding-left: 5em;
-  padding-right: 5em;
+@media only screen and (max-width: 600px) {
+  .motivators {
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
+
+@media only screen and (min-width: 600px) {
+  .motivators {
+    padding-left: 10em;
+    padding-right: 10em;
+  }
+}
+
 h1 {
   text-align: center;
 }
@@ -153,7 +163,7 @@ h1 {
 
 .motivators-list {
   order: 1;
-  width: 30%;
+  width: 40%;
 }
 
 .motivator-stacked {
@@ -180,7 +190,7 @@ h1 {
 .motivator-detail {
   order: 2;
   text-align: center;
-  width: 30%;
+  width: 40%;
 }
 
 .motivator-description {
