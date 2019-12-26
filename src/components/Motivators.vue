@@ -3,8 +3,12 @@
     <h1>Moving Motivators</h1>
 
     <p class="motivators-explanation">
-      Ordena los siguientes motivadores de acuerdo a tus preferencias.<br>
+      Ordena los siguientes motivadores de acuerdo a tus preferencias.
+      <br>
       Al posicionarte en cada ítem podrás ver una descripción para entender qué significa cada uno.
+      <br>
+      Moving Motivators es una de las actividades de Management 3.0
+      (<a href="https://management30.com/practice/moving-motivators/">más info aquí</a>)
     </p>
     <div class="motivators-container">
       <div class="motivators-list">
@@ -124,7 +128,7 @@ h1 {
 
 .motivators-list {
   order: 1;
-  width: 30%;
+  width: 25%;
 }
 
 .motivator-stacked {
@@ -139,7 +143,9 @@ h1 {
 }
 
 .motivator-stacked:hover {
-  padding-left: 20px;
+  margin-left: 1em;
+  margin-right: -1em;
+  cursor: grab;
 }
 
 .motivator-detail {
