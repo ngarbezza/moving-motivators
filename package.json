@@ -9,18 +9,19 @@
   },
   "dependencies": {
     "core-js": "^3.9.1",
-    "vue": "^2.6.12",
-    "vuedraggable": "^2.24.3"
+    "vue": "^3.2.2",
+    "vue-draggable-next": "^2.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.12",
     "@vue/cli-plugin-eslint": "^4.5.12",
     "@vue/cli-service": "^4.5.12",
-    "@vue/eslint-config-airbnb": "^4.0.1",
+    "@vue/compiler-sfc": "^3.1.0",
+    "@vue/eslint-config-airbnb": "^5.3.0",
     "babel-eslint": "^10.1.0",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.12"
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.24.0",
+    "eslint-plugin-vue": "^7.16.0"
   },
   "eslintConfig": {
     "root": true,
