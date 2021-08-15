@@ -12,26 +12,34 @@
     </p>
     <div class="motivators-container">
       <div class="motivators-list">
-        <draggable v-model="motivators">
+        <draggable
+            v-model="motivators"
+            @start="startDragging"
+            @end="stopDragging"
+            @moved="orderingMotivator">
           <div v-for="motivator in motivators" :key="motivator.id">
             <div class="motivator-stacked"
                  :style="`background-color: ${motivator.color}`"
-                 @mouseover="viewingMotivator(motivator)">
+                 @mouseenter="viewingMotivator(motivator)"
+                 @mouseleave="unsetMotivator">
               <div class="motivator-name">{{ motivator.name }}</div>
             </div>
           </div>
         </draggable>
       </div>
       <div class="motivator-detail">
-        <h3>{{ selectedMotivator.name }}</h3>
-        <p class="motivator-description">"{{ selectedMotivator.description }}"</p>
+        <h3>{{ selectedMotivatorStatus() }}</h3>
+        <p class="motivator-description" v-if="selectedMotivator && !dragging">
+          "{{ selectedMotivator.description }}"
+        </p>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import draggable from 'vuedraggable';
+import { ref } from 'vue';
+import { VueDraggableNext } from 'vue-draggable-next';
 
 const shuffle = (array) => {
   let currentIndex = array.length;
@@ -118,36 +126,52 @@ const motivators = shuffle([
   },
 ]);
 
-const selectedMotivator = motivators[0];
-
 export default {
   name: 'Motivators',
-  components: { draggable },
+  components: {
+    draggable: VueDraggableNext,
+  },
   data: () => ({
     motivators,
-    selectedMotivator,
   }),
-  methods: {
-    viewingMotivator(motiv) {
-      this.$set(this, 'selectedMotivator', motiv);
-    },
+  setup: () => {
+    const selectedMotivator = ref(null);
+    const viewingMotivator = (motivator) => { selectedMotivator.value = motivator; };
+    const unsetMotivator = () => { selectedMotivator.value = null; };
+    const orderingMotivator = (_i, _e, elem) => { selectedMotivator.value = elem; };
+
+    const dragging = ref(false);
+    const startDragging = () => { dragging.value = true; };
+    const stopDragging = () => { dragging.value = false; };
+
+    const selectedMotivatorStatus = () => {
+      if (dragging.value) {
+        return 'Ordenando...';
+      }
+
+      return selectedMotivator.value?.name ?? 'Elige un motivador';
+    };
+
+    return {
+      selectedMotivator,
+      viewingMotivator,
+      unsetMotivator,
+      orderingMotivator,
+      dragging,
+      startDragging,
+      stopDragging,
+      selectedMotivatorStatus,
+    };
   },
 };
 </script>
 
 <style scoped>
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 800px) {
   .motivators {
-    padding-left: 1em;
-    padding-right: 1em;
-  }
-}
-
-@media only screen and (min-width: 600px) {
-  .motivators {
-    padding-left: 10em;
-    padding-right: 10em;
+    padding-left: 10%;
+    padding-right: 10%;
   }
 }
 
@@ -167,19 +191,19 @@ h1 {
 }
 
 .motivator-stacked {
-  padding: 10px;
-  margin: 5px;
-  border: 2px solid #2c3e50;
+  padding: .8em;
 }
 
 .motivator-name {
   color: white;
   font-weight: bolder;
+  text-align: center;
+  text-shadow: 0 0 3px black;
 }
 
 .motivator-stacked:hover {
-  margin-left: 1em;
-  margin-right: -1em;
+  padding: calc(.8em - .15em);
+  border: .15em solid;
   cursor: grab;
 }
 
@@ -194,7 +218,7 @@ h1 {
 }
 
 .motivator-description {
-  font-size: 2em;
+  font-size: 1.5em;
   font-style: italic;
 }
 </style>
