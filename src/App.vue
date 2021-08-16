@@ -1,13 +1,13 @@
 <template>
-  <Motivators/>
+  <PrioritizedMotivators/>
 </template>
 
 <script>
-import Motivators from './components/Motivators.vue';
+import PrioritizedMotivators from './components/PrioritizedMotivators.vue';
 
 export default {
   name: 'App',
-  components: { Motivators },
+  components: { PrioritizedMotivators },
 };
 </script>
 
