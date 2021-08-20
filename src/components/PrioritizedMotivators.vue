@@ -1,5 +1,5 @@
 <template>
-  <div class="motivators">
+  <div>
     <h1>Moving Motivators</h1>
 
     <p class="motivators-explanation">
@@ -84,13 +84,6 @@ export default {
 </script>
 
 <style scoped>
-
-@media only screen and (min-width: 800px) {
-  .motivators {
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-}
 
 h1 {
   text-align: center;

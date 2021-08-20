@@ -6,11 +6,8 @@ import en from './translate/en.json';
 import es from './translate/es.json';
 
 const messages = { en, es };
-
-const i18n = createI18n({
-  locale: 'es', // set locale
-  messages, // set locale messages
-});
+const locale = 'en';
+const i18n = createI18n({ locale, messages });
 
 const app = createApp(App);
 app.use(i18n);
