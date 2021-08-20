@@ -22,15 +22,15 @@
                  :style="`background-color: ${motivator.color}`"
                  @mouseenter="viewingMotivator(motivator)"
                  @mouseleave="unsetMotivator">
-              <div class="motivator-name">{{ motivator.name }}</div>
+              <div class="motivator-name">{{ $t(motivator.name) }}</div>
             </div>
           </div>
         </draggable>
       </div>
       <div class="motivator-detail">
-        <h3>{{ selectedMotivatorStatus() }}</h3>
+        <h3>{{ $t(selectedMotivatorStatus()) }}</h3>
         <p class="motivator-description" v-if="selectedMotivator && !dragging">
-          "{{ selectedMotivator.description }}"
+          "{{ $t(selectedMotivator.description) }}"
         </p>
       </div>
     </div>
@@ -63,10 +63,10 @@ export default {
 
     const selectedMotivatorStatus = () => {
       if (dragging.value) {
-        return 'Ordenando...';
+        return 'actions.ordering';
       }
 
-      return selectedMotivator.value?.name ?? 'Elige un motivador';
+      return selectedMotivator.value?.name ?? 'actions.choose_motivator';
     };
 
     return {
