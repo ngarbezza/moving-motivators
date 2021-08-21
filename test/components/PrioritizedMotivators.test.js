@@ -1,16 +1,18 @@
 import { render } from '@testing-library/vue';
 import PrioritizedMotivators from '../../src/components/PrioritizedMotivators.vue';
-import motivators from '../../src/motivators';
-import inSpanish from '../helpers/inSpanish';
+import withSpanishTranslations from '../helpers/withSpanishTranslations';
+import es from '../../src/locales/es.json';
 
 test('El texto inicial es "Elige un motivador"', () => {
-  const { getByText } = render(PrioritizedMotivators);
+  const { getByText } = render(PrioritizedMotivators, withSpanishTranslations);
 
   expect(getByText('Elige un motivador')).toBeDefined();
 });
 
-test('Se incluyen todos los motivadores', () => {
-  const { getByText } = render(PrioritizedMotivators);
+test('Se incluyen todos los motivadores con sus descripciones', () => {
+  const { getByText } = render(PrioritizedMotivators, withSpanishTranslations);
 
-  motivators.forEach((motivator) => expect(getByText(inSpanish(motivator.name))).toBeDefined());
+  Object.keys(es.motivators).forEach((motivator) => {
+    expect(getByText(es.motivators[motivator].name)).toBeDefined();
+  });
 });

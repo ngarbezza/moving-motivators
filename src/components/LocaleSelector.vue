@@ -1,29 +1,27 @@
 <template>
   <div class="locale-changer">
     <span>Change language: </span>
-    <select v-model="$i18n.locale">
+    <select v-model="locale">
       <option
-        v-for="locale in $i18n.availableLocales"
-        :key="`locale-${locale}`"
-        :value="locale"
+        v-for="availableLocale in availableLocales"
+        :key="`locale-${availableLocale}`"
+        :value="availableLocale"
       >
-        {{ locale }}
+        {{ availableLocale }}
       </option>
     </select>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'LocaleSelector',
-};
+<script setup>
+import { useI18n } from 'vue-i18n';
+
+const { locale, availableLocales } = useI18n();
 </script>
 
 <style scoped>
-
 .locale-changer {
   margin-top: 1em;
   text-align: right;
 }
-
 </style>

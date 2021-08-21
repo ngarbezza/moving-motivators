@@ -19,19 +19,19 @@
           @mouseleave="unsetMotivator"
         >
           <div class="motivator-name">
-            {{ $t(motivator.name) }}
+            {{ t(motivator.name) }}
           </div>
         </div>
       </div>
     </draggable>
   </div>
   <div class="motivator-detail">
-    <h3>{{ $t(selectedMotivatorStatus()) }}</h3>
+    <h3>{{ t(selectedMotivatorStatus()) }}</h3>
     <p
       class="motivator-description"
       v-if="selectedMotivator && !dragging"
     >
-      "{{ $t(selectedMotivator.description) }}"
+      "{{ t(selectedMotivator.description) }}"
     </p>
   </div>
 </template>
@@ -39,6 +39,7 @@
 <script setup>
 import { VueDraggableNext as draggable } from 'vue-draggable-next';
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import motivators from '../motivators';
 import shuffle from '../utils/shuffle';
 
@@ -59,6 +60,8 @@ const selectedMotivatorStatus = () => {
 
   return selectedMotivator.value?.name ?? 'actions.choose_motivator';
 };
+
+const { t } = useI18n();
 </script>
 
 <style scoped>
