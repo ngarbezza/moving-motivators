@@ -1,100 +1,67 @@
 <template>
-  <div>
-    <h1>Moving Motivators</h1>
-
-    <p class="motivators-explanation">
-      Ordena los siguientes motivadores de acuerdo a tus preferencias.
-      <br>
-      Al posicionarte en cada ítem podrás ver una descripción para entender qué significa cada uno.
-      <br>
-      Moving Motivators es una de las actividades de Management 3.0
-      (<a href="https://management30.com/practice/moving-motivators/">más info aquí</a>)
-    </p>
-    <div class="motivators-container">
-      <div class="motivators-list">
-        <draggable
-            v-model="motivators"
-            @start="startDragging"
-            @end="stopDragging"
-            @moved="orderingMotivator">
-          <div v-for="motivator in motivators" :key="motivator.id">
-            <div class="motivator-stacked"
-                 :style="`background-color: ${motivator.color}`"
-                 @mouseenter="viewingMotivator(motivator)"
-                 @mouseleave="unsetMotivator">
-              <div class="motivator-name">{{ $t(motivator.name) }}</div>
-            </div>
+  <div
+    class="motivators-list"
+  >
+    <draggable
+      v-model="motivatorsList"
+      @start="startDragging"
+      @end="stopDragging"
+      @moved="orderingMotivator"
+    >
+      <div
+        v-for="motivator in motivatorsList"
+        :key="motivator.id"
+      >
+        <div
+          class="motivator-stacked"
+          :style="`background-color: ${motivator.color}`"
+          @mouseenter="viewingMotivator(motivator)"
+          @mouseleave="unsetMotivator"
+        >
+          <div class="motivator-name">
+            {{ $t(motivator.name) }}
           </div>
-        </draggable>
+        </div>
       </div>
-      <div class="motivator-detail">
-        <h3>{{ $t(selectedMotivatorStatus()) }}</h3>
-        <p class="motivator-description" v-if="selectedMotivator && !dragging">
-          "{{ $t(selectedMotivator.description) }}"
-        </p>
-      </div>
-    </div>
+    </draggable>
+  </div>
+  <div class="motivator-detail">
+    <h3>{{ $t(selectedMotivatorStatus()) }}</h3>
+    <p
+      class="motivator-description"
+      v-if="selectedMotivator && !dragging"
+    >
+      "{{ $t(selectedMotivator.description) }}"
+    </p>
   </div>
 </template>
 
-<script>
+<script setup>
+import { VueDraggableNext as draggable } from 'vue-draggable-next';
 import { ref } from 'vue';
-import { VueDraggableNext } from 'vue-draggable-next';
 import motivators from '../motivators';
 import shuffle from '../utils/shuffle';
 
-export default {
-  name: 'PrioritizedMotivators',
-  components: {
-    draggable: VueDraggableNext,
-  },
-  data: () => ({
-    motivators: shuffle(motivators),
-  }),
-  setup: () => {
-    const selectedMotivator = ref(null);
-    const viewingMotivator = (motivator) => { selectedMotivator.value = motivator; };
-    const unsetMotivator = () => { selectedMotivator.value = null; };
-    const orderingMotivator = (_i, _e, elem) => { selectedMotivator.value = elem; };
+const motivatorsList = shuffle(motivators);
+const selectedMotivator = ref(null);
+const viewingMotivator = (motivator) => { selectedMotivator.value = motivator; };
+const unsetMotivator = () => { selectedMotivator.value = null; };
+const orderingMotivator = (_i, _e, elem) => { selectedMotivator.value = elem; };
 
-    const dragging = ref(false);
-    const startDragging = () => { dragging.value = true; };
-    const stopDragging = () => { dragging.value = false; };
+const dragging = ref(false);
+const startDragging = () => { dragging.value = true; };
+const stopDragging = () => { dragging.value = false; };
 
-    const selectedMotivatorStatus = () => {
-      if (dragging.value) {
-        return 'actions.ordering';
-      }
+const selectedMotivatorStatus = () => {
+  if (dragging.value) {
+    return 'actions.ordering';
+  }
 
-      return selectedMotivator.value?.name ?? 'actions.choose_motivator';
-    };
-
-    return {
-      selectedMotivator,
-      viewingMotivator,
-      unsetMotivator,
-      orderingMotivator,
-      dragging,
-      startDragging,
-      stopDragging,
-      selectedMotivatorStatus,
-    };
-  },
+  return selectedMotivator.value?.name ?? 'actions.choose_motivator';
 };
 </script>
 
 <style scoped>
-
-h1 {
-  text-align: center;
-}
-
-.motivators-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
-
 .motivators-list {
   order: 1;
   width: 40%;
@@ -115,10 +82,6 @@ h1 {
   padding: calc(.8em - .15em);
   border: .15em solid;
   cursor: grab;
-}
-
-.motivators-explanation {
-  text-align: center;
 }
 
 .motivator-detail {

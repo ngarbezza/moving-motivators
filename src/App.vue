@@ -1,17 +1,17 @@
 <template>
   <div class="moving-motivators-container">
-    <PrioritizedMotivators/>
+    <MotivatorsContainer />
     <LocaleSelector />
   </div>
 </template>
 
 <script>
-import PrioritizedMotivators from './components/PrioritizedMotivators.vue';
+import MotivatorsContainer from './components/MotivatorsContainer.vue';
 import LocaleSelector from './components/LocaleSelector.vue';
 
 export default {
   name: 'App',
-  components: { PrioritizedMotivators, LocaleSelector },
+  components: { MotivatorsContainer, LocaleSelector },
 };
 </script>
 
