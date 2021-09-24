@@ -1,0 +1,48 @@
+{
+  "actions": {
+    "choose_motivator": "Scegli un motivatore",
+    "ordering": "Ordinando..."
+  },
+  "motivators": {
+    "acceptance": {
+      "name": "ACCETTAZIONE",
+      "description": "Le persone intorno a me approvano ciò che faccio e chi sono"
+    },
+    "curiosity": {
+      "name": "CURIOSITÀ",
+      "description": "Ho un sacco di cose da indagare e a cui pensare"
+    },
+    "honor": {
+      "name": "ONORE",
+      "description": "Sono orgoglioso che i miei valori personali si riflettano nel modo in cui lavoro"
+    },
+    "mastery": {
+      "name": "PADRONANZA",
+      "description": "Il mio lavoro mette alla prova la mia competenza ma è ancora nelle mie capacità"
+    },
+    "power": {
+      "name": "POTENZA",
+      "description": "C'è abbastanza spazio per me per influenzare ciò che accade intorno a me"
+    },
+    "freedom": {
+      "name": "LIBERTÀ",
+      "description": "Sono indipendente dagli altri con il mio lavoro e le mie responsabilità"
+    },
+    "relatedness": {
+      "name": "CORRELAZIONE",
+      "description": "Ho buoni contatti sociali con le persone nel mio lavoro"
+    },
+    "order": {
+      "name": "ORDINE",
+      "description": "Ci sono abbastanza regole e politiche per un ambiente stabile"
+    },
+    "goal": {
+      "name": "OBIETTIVO",
+      "description": "Il mio scopo nella vita si riflette nel lavoro che svolgo"
+    },
+    "status": {
+      "name": "STATO",
+      "description": "La mia posizione è buona e riconosciuta dalle persone che lavorano con me"
+    }
+  }
+}
