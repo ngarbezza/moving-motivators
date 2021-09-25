@@ -9,28 +9,29 @@
     "test": "jest"
   },
   "dependencies": {
-    "core-js": "^3.9.1",
+    "core-js": "^3.18.0",
     "vue": "^3.2.2",
     "vue-draggable-next": "^2.0.1",
-    "vue-i18n": "^9.1.7"
+    "vue-i18n": "^9.1.7",
+    "webpack": "^5.54.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
+    "@babel/core": "^7.15.5",
+    "@babel/eslint-parser": "^7.12.16",
+    "@babel/preset-env": "^7.15.6",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/vue": "^6.4.2",
-    "@vue/cli-plugin-babel": "^4.5.12",
-    "@vue/cli-plugin-eslint": "^4.5.12",
-    "@vue/cli-service": "^4.5.12",
-    "@vue/compiler-sfc": "^3.1.0",
+    "@vue/cli-plugin-babel": "^5.0.0-beta.4",
+    "@vue/cli-plugin-eslint": "^5.0.0-beta.4",
+    "@vue/cli-service": "^5.0.0-beta.4",
+    "@vue/compiler-sfc": "^3.2.18",
     "@vue/eslint-config-airbnb": "^5.3.0",
     "@vue/test-utils": "^2.0.0-rc.12",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^27.0.6",
-    "eslint": "^6.8.0",
-    "eslint-plugin-import": "^2.24.0",
-    "eslint-plugin-vue": "^7.16.0",
-    "jest": "^27.0.6",
+    "babel-jest": "^27.2.1",
+    "eslint": "^7.20.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-vue": "^7.18.0",
+    "jest": "^27.2.1",
     "vue3-jest": "^27.0.0-alpha.1"
   },
   "eslintConfig": {
@@ -45,7 +46,7 @@
     ],
     "rules": {},
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "@babel/eslint-parser"
     }
   },
   "postcss": {
