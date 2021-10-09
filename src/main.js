@@ -4,8 +4,10 @@ import App from './App.vue';
 
 import en from './translate/en.json';
 import es from './translate/es.json';
+import it from './translate/it.json';
 
-const messages = { en, es };
+
+const messages = { en, es, it };
 const locale = 'en';
 const i18n = createI18n({ locale, messages });
 
