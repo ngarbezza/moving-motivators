@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "LucaArgentieri",
+      "name": "Luca Argentieri",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57524787?v=4",
+      "profile": "https://github.com/LucaArgentieri",
+      "contributions": [
+        "translation"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "moving-motivators",
+  "projectOwner": "ngarbezza",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
