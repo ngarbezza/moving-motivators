@@ -1,0 +1,48 @@
+{
+  "actions": {
+    "choose_motivator": "Wählen Sie einen Motivator",
+    "ordering": "Bestellen..."
+  },
+  "motivators": {
+    "acceptance": {
+      "name": "AKZEPTANZ",
+      "description": "Die Menschen um mich herum finden gut, was ich tue und wer ich bin"
+    },
+    "curiosity": {
+      "name": "NEUGIER",
+      "description": "Ich habe viele Dinge zu untersuchen und darüber nachzudenken"
+    },
+    "honor": {
+      "name": "EHRE",
+      "description": "Ich bin stolz darauf, dass sich meine persönlichen Werte in meiner Arbeit widerspiegeln"
+    },
+    "mastery": {
+      "name": "BEHERRSCHUNG",
+      "description": "Meine Arbeit ist eine Herausforderung für mich, aber sie liegt noch im Rahmen meiner Fähigkeiten"
+    },
+    "power": {
+      "name": "MACHT",
+      "description": "Es gibt genug Raum für mich, um zu beeinflussen, was um mich herum geschieht"
+    },
+    "freedom": {
+      "name": "FREIHEIT",
+      "description": "Ich bin unabhängig von anderen bei meiner Arbeit und meinen Aufgaben"
+    },
+    "relatedness": {
+      "name": "VERWANDTSCHAFT",
+      "description": "Ich habe gute soziale Kontakte zu den Menschen an meinem Arbeitsplatz"
+    },
+    "order": {
+      "name": "ORDNUNG",
+      "description": "Es gibt genügend Regeln und Strategien für ein stabiles Umfeld"
+    },
+    "goal": {
+      "name": "ZIEL",
+      "description": "Mein Lebensziel spiegelt sich in der Arbeit wider, die ich tue"
+    },
+    "status": {
+      "name": "STELLUNG",
+      "description": "Meine Position ist gut und wird von den Menschen, die mit mir arbeiten, anerkannt."
+    }
+  }
+}
