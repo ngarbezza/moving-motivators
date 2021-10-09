@@ -1,6 +1,6 @@
 # Moving Motivators
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5f1f44bc-f64d-422b-a517-bbb0de19ac9e/deploy-status)](https://app.netlify.com/sites/moving-motivators/deploys)
@@ -49,6 +49,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://github.com/LucaArgentieri"><img src="https://avatars.githubusercontent.com/u/57524787?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Luca Argentieri</b></sub></a><br /><a href="#translation-LucaArgentieri" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/SKilb"><img src="https://avatars.githubusercontent.com/u/8880192?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Sebastian Kilb</b></sub></a><br /><a href="#translation-SKilb" title="Translation">🌍</a></td>
   </tr>
 </table>
 
