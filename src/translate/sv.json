@@ -1,0 +1,48 @@
+{
+  "actions": {
+    "choose_motivator": "Välj en motiverare",
+    "ordering": "Ordnar..."
+  },
+  "motivators": {
+    "acceptance": {
+      "name": "ACCEPTANS",
+      "description": "Människorna runt omkring mig accepterar mig för vem jag är och vad jag gör"
+    },
+    "curiosity": {
+      "name": "NYFIKENHET",
+      "description": "Jag har mycket att tänka på och utforska"
+    },
+    "honor": {
+      "name": "STOLTHET",
+      "description": "Jag känner mig stolt att mina personliga värderingar reflekteras i mitt arbete"
+    },
+    "mastery": {
+      "name": "SKICKLIGHET",
+      "description": "Mitt arbete utmanar min kompetens men jag har förmågan för att klara det"
+    },
+    "power": {
+      "name": "MAKT",
+      "description": "Jag kan påverka det som händer runt omkring mig"
+    },
+    "freedom": {
+      "name": "FRIHET",
+      "description": "Jag jobbar självständigt och tar ansvar för mitt arbete"
+    },
+    "relatedness": {
+      "name": "RELATIONER",
+      "description": "Jar har god social kontakt med de jag jobbar med"
+    },
+    "order": {
+      "name": "ORDNING",
+      "description": "Det finns tillräkligt med regler för att skapa en stabil miljö"
+    },
+    "goal": {
+      "name": "MÅL",
+      "description": "Syftet med mitt liv reflekteras i mitt arbete"
+    },
+    "status": {
+      "name": "STATUS",
+      "description": "Min position är bra, och erkänns av de som jobbar med mig"
+    }
+  }
+}
