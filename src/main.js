@@ -6,6 +6,7 @@ import en from './translate/en.json';
 import es from './translate/es.json';
 import it from './translate/it.json';
 import de from './translate/de.json';
+import pt from './translate/pt.json';
 import sv from './translate/sv.json';
 
 const messages = {
@@ -13,6 +14,7 @@ const messages = {
   es,
   it,
   de,
+  pt,
   sv,
 };
 const locale = 'en';
