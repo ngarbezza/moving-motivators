@@ -21,7 +21,10 @@
             <div class="motivator-stacked"
                  :style="`background-color: ${motivator.color}`"
                  @mouseenter="viewingMotivator(motivator)"
-                 @mouseleave="unsetMotivator">
+                 @focus="viewingMotivator(motivator)"
+                 @mouseleave="unsetMotivator"
+                 @blur="unsetMotivator"
+            >
               <div class="motivator-name">{{ $t(motivator.name) }}</div>
             </div>
           </div>
