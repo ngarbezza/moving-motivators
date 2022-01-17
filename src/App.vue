@@ -1,6 +1,6 @@
 <template>
   <div class="moving-motivators-container">
-    <PrioritizedMotivators/>
+    <PrioritizedMotivators />
     <LocaleSelector />
   </div>
 </template>
