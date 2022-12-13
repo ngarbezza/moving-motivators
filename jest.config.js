@@ -152,7 +152,9 @@ module.exports = {
   testEnvironment: 'jsdom',
 
   // Options that will be passed to the testEnvironment
-  // testEnvironmentOptions: {},
+  testEnvironmentOptions: {
+    customExportConditions: ['node', 'node-addons'],
+  },
 
   // Adds a location field to test results
   // testLocationInResults: false,
@@ -187,7 +189,7 @@ module.exports = {
 
   // A map from regular expressions to paths to transformers
   transform: {
-    '^.+\\.vue$': 'vue3-jest',
+    '^.+\\.vue$': '@vue/vue3-jest',
     '^.+\\.js$': 'babel-jest',
   },
 

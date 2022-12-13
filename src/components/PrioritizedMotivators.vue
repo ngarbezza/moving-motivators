@@ -13,17 +13,18 @@
     <div class="motivators-container">
       <div class="motivators-list">
         <draggable
-            v-model="motivators"
-            @start="startDragging"
-            @end="stopDragging"
-            @moved="orderingMotivator">
+          v-model="motivators"
+          @start="startDragging"
+          @end="stopDragging"
+          @moved="orderingMotivator">
           <div v-for="motivator in motivators" :key="motivator.id">
-            <div class="motivator-stacked"
-                 :style="`background-color: ${motivator.color}`"
-                 @mouseenter="viewingMotivator(motivator)"
-                 @focus="viewingMotivator(motivator)"
-                 @mouseleave="unsetMotivator"
-                 @blur="unsetMotivator"
+            <div
+              class="motivator-stacked"
+              :style="`background-color: ${motivator.color}`"
+              @mouseenter="viewingMotivator(motivator)"
+              @focus="viewingMotivator(motivator)"
+              @mouseleave="unsetMotivator"
+              @blur="unsetMotivator"
             >
               <div class="motivator-name">{{ $t(motivator.name) }}</div>
             </div>
