@@ -14,7 +14,7 @@
     "vue": "^3.2.47",
     "vue-draggable-next": "^2.1.1",
     "vue-i18n": "^9.2.2",
-    "webpack": "^5.80.0"
+    "webpack": "^5.82.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
