@@ -9,6 +9,8 @@ import de from './translate/de.json';
 import pt from './translate/pt.json';
 import sv from './translate/sv.json';
 
+import getDefaultLanguage from './utils/getDefaultLanguage';
+
 const messages = {
   en,
   es,
@@ -17,8 +19,9 @@ const messages = {
   pt,
   sv,
 };
-const locale = 'en';
-const i18n = createI18n({ locale, messages });
+
+const locale = getDefaultLanguage();
+const i18n = createI18n({ locale, messages, fallbackLocale: 'en' });
 
 const app = createApp(App);
 app.use(i18n);
