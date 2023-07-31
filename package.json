@@ -17,7 +17,7 @@
     "webpack": "^5.88.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.22.5",
+    "@babel/core": "^7.22.9",
     "@babel/eslint-parser": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
     "@testing-library/jest-dom": "^5.17.0",
