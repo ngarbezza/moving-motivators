@@ -19,7 +19,7 @@
   "devDependencies": {
     "@babel/core": "^7.23.3",
     "@babel/eslint-parser": "^7.23.3",
-    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-env": "^7.23.7",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/vue": "^8.0.0",
     "@vue/cli-plugin-babel": "^5.0.8",
