@@ -19,7 +19,7 @@
     "vue-i18n": "^9.14.1"
   },
   "devDependencies": {
-    "@testing-library/vue": "^8.0.2",
+    "@testing-library/vue": "^8.1.0",
     "@vitest/coverage-v8": "^2.1.1",
     "@vue/eslint-config-airbnb": "^8.0.0",
     "@vue/test-utils": "^2.4.6",
