@@ -8,6 +8,7 @@ import it from './translate/it.json';
 import de from './translate/de.json';
 import pt from './translate/pt.json';
 import sv from './translate/sv.json';
+import bn from './translate/bn.json'; 
 
 import getDefaultLanguage from './utils/getDefaultLanguage';
 
@@ -18,6 +19,7 @@ const messages = {
   de,
   pt,
   sv,
+  bn
 };
 
 const locale = getDefaultLanguage();
