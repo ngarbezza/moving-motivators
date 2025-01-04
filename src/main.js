@@ -1,5 +1,5 @@
-import { createApp } from 'vue';
-import { createI18n } from 'vue-i18n';
+import {createApp} from 'vue';
+import {createI18n} from 'vue-i18n';
 import App from './App.vue';
 
 import en from './translate/en.json';
@@ -8,7 +8,7 @@ import it from './translate/it.json';
 import de from './translate/de.json';
 import pt from './translate/pt.json';
 import sv from './translate/sv.json';
-import bn from './translate/bn.json'; 
+import bn from './translate/bn.json';
 
 import getDefaultLanguage from './utils/getDefaultLanguage';
 
@@ -19,7 +19,7 @@ const messages = {
   de,
   pt,
   sv,
-  bn
+  bn,
 };
 
 const locale = getDefaultLanguage();

@@ -16,8 +16,12 @@
           v-model="motivators"
           @start="startDragging"
           @end="stopDragging"
-          @moved="orderingMotivator">
-          <div v-for="motivator in motivators" :key="motivator.id">
+          @moved="orderingMotivator"
+        >
+          <div
+            v-for="motivator in motivators"
+            :key="motivator.id"
+          >
             <div
               class="motivator-stacked"
               :style="`background-color: ${motivator.color}`"
@@ -26,14 +30,19 @@
               @mouseleave="unsetMotivator"
               @blur="unsetMotivator"
             >
-              <div class="motivator-name">{{ $t(motivator.name) }}</div>
+              <div class="motivator-name">
+                {{ $t(motivator.name) }}
+              </div>
             </div>
           </div>
         </draggable>
       </div>
       <div class="motivator-detail">
         <h3>{{ $t(selectedMotivatorStatus()) }}</h3>
-        <p class="motivator-description" v-if="selectedMotivator && !dragging">
+        <p
+          v-if="selectedMotivator && !dragging"
+          class="motivator-description"
+        >
           "{{ $t(selectedMotivator.description) }}"
         </p>
       </div>
@@ -42,8 +51,8 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-import { VueDraggableNext } from 'vue-draggable-next';
+import {ref} from 'vue';
+import {VueDraggableNext} from 'vue-draggable-next';
 import motivators from '../motivators';
 import shuffle from '../utils/shuffle';
 
@@ -52,9 +61,6 @@ export default {
   components: {
     draggable: VueDraggableNext,
   },
-  data: () => ({
-    motivators: shuffle(motivators),
-  }),
   setup: () => {
     const selectedMotivator = ref(null);
     const viewingMotivator = (motivator) => { selectedMotivator.value = motivator; };
@@ -84,6 +90,9 @@ export default {
       selectedMotivatorStatus,
     };
   },
+  data: () => ({
+    motivators: shuffle(motivators),
+  }),
 };
 </script>
 
